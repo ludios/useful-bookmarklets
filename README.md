@@ -29,6 +29,7 @@ Suggested keyword: <kbd>ks</kbd> ("kill sticky")
 Test page: https://www.quantamagazine.org/she-turns-fluids-into-black-holes-and-inflating-universes-20221212/
 
 
+
 ## Replace all `font-family` with your preferred typefaces
 
 ```js
@@ -46,6 +47,35 @@ javascript:(function() {
 Suggested keyword: <kbd>ff</kbd> ("font family")
 
 Test page: https://www.gwern.net/The-Melancholy-of-Subculture-Society
+
+
+
+## Set `max-width` on body and unjustify text
+
+This bookmarklet takes one argument typed after the bookmark keyword, a `max-width` in `em`s.
+
+```js
+javascript:(function() {
+	const max_width = %s || 40;
+
+	document.head.insertAdjacentHTML('beforeend', `<style>
+		body {
+			margin: 0 auto !important; 
+			max-width: ${max_width}em;
+		}
+	</style>`);
+
+	document.querySelectorAll('*').forEach(e => {
+		if (window.getComputedStyle(e).getPropertyValue('text-align') == 'justify') {
+			e.style.textAlign = 'left';
+		}
+	});
+})();
+```
+
+Suggested keyword: <kbd>rw</kbd> ("reading width")
+
+Test page: https://danluu.com/input-lag/
 
 
 
