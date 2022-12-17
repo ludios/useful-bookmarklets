@@ -1,6 +1,6 @@
 # Useful bookmarklets
 
-A collection of bookmarklets I use frequently.
+A collection of <a href="https://en.wikipedia.org/wiki/Bookmarklet">bookmarklets</a> I use frequently.
 
 How to set things up so that you can activate a bookmarklet by typing a keyword into the address bar:
 *	Chrome
