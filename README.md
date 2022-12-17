@@ -114,3 +114,34 @@ javascript:(function() {
 Suggested keyword: <kbd>gr</kbd> ("gray background")
 
 Test page: https://meaningness.com/modes-chart after being modified by Dark Reader's Dynamic mode.
+
+
+
+## Inject width=device-width
+
+Useful on mobile when browsing pre-smartphone pages, but where the font size is too small due to the lack of `<meta name="viewport" content="width=device-width" />`.
+
+```js
+javascript:(function() {
+	document.head.insertAdjacentHTML('beforeend', `
+		<meta name="viewport" content="width=device-width" />
+		<style>
+			body {
+	            /* Without word-break: break-word, iOS Safari 16.1 lets
+	             * very long words e.g. URLs widen the page */
+				word-break: break-word;
+
+	            /* Don't let iOS Safari enlarge the font size when the phone is in landscape mode.
+	             * https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
+	             */
+	            -webkit-text-size-adjust: none;
+	            text-size-adjust: none;
+			}
+		</style>
+	`);
+})();
+```
+
+Suggested keyword: none, as this is only useful on mobile.
+
+Test page: http://home.hiwaay.net/~emilyj/usenet/index.html
