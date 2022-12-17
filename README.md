@@ -130,7 +130,7 @@ Test page: https://www.tensorflow.org/tensorboard/graphs#op-level_graph
 
 ## Set a gray background-color for all images
 
-Sometimes useful with Dark Reader when images with a transparent background are made unreadable (<a href="https://github.com/darkreader/darkreader/issues/356">#356</a>, <a href="https://github.com/darkreader/darkreader/issues/3753">#3753</a>). Both black and white will be readable on gray.
+Sometimes useful with Dark Reader when images with a transparent background are made unreadable (<a href="https://github.com/darkreader/darkreader/issues/356">#356</a>, <a href="https://github.com/darkreader/darkreader/issues/3753">#3753</a>). Both black and white will be readable on <code>#888</code> (a midpoint which is untouched by Dark Reader).
 
 ```js
 javascript:(function() {
