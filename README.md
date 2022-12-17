@@ -5,14 +5,16 @@ A collection of bookmarklets I use frequently.
 How to set things up so that you can activate a bookmarklet by typing a keyword into the address bar:
 *	Chrome
 	1.	Right-click the address bar, 'Manage search engines and site search' to reach <tt>chrome://settings/searchEngines</tt>
-	2.	'Add' a site search and enter a keyword into 'Shortcut'
+	2.	'Add' a site search with a `javascript:` URL and enter a keyword into 'Shortcut'
 *	Edge
 	1.	Visit <tt>edge://settings/searchEngines</tt>
-	2.	'Add' a site search and enter a keyword into 'Keyword'
+	2.	'Add' a site search with a `javascript:` URL and enter a keyword into 'Keyword'
 *	Firefox
-	1.	Add a bookmark and enter a keyword into 'Keyword'
+	1.	Add a bookmark with a `javascript:` URL and enter a keyword into 'Keyword'
 
 Note that bookmarklets don't need to be URL-encoded. You can just paste a block of JavaScript starting with `javascript:` into the URL of the bookmark (Firefox) or search engine.
+
+Yes, bookmarklets can be used on mobile as well. In iOS Safari, bookmark any page, then edit the bookmark and replace the URL with some `javascript:`.
 
 
 
