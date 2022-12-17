@@ -2,7 +2,7 @@
 
 A collection of bookmarklets I use frequently.
 
-To activate a bookmarklet by typing a keyword into the address bar:
+How to set things up so that you can activate a bookmarklet by typing a keyword into the address bar:
 *	Chrome
 	1.	Right-click the address bar, 'Manage search engines and site search' to reach <tt>chrome://settings/searchEngines</tt>
 	2.	'Add' a site search and enter a keyword into 'Shortcut'
@@ -18,19 +18,21 @@ Note that bookmarklets don't need to be URL-encoded. You can just paste a block 
 
 ## Kill Sticky
 
-<a href="https://github.com/t-mart/kill-sticky">Kill Sticky</a> is the best bookmarklet and it's in someone else's repository.
+<a href="https://github.com/t-mart/kill-sticky">Kill Sticky</a> is the best bookmarklet and it is in someone else's repository.
+
+Just add <code>javascript:</code> before <a href="https://github.com/t-mart/kill-sticky/blob/master/src/kill-sticky.js">the source here</a>.
 
 Suggested keyword: <kbd>ks</kbd> ("kill sticky")
 
 Test page: https://www.quantamagazine.org/she-turns-fluids-into-black-holes-and-inflating-universes-20221212/
 
 
-## Replace all font-family with your preferred typefaces
+## Replace all `font-family` with your preferred typefaces
 
 ```js
 javascript:(function() {
 	document.querySelectorAll('*').forEach(e => {
-		if (!e.style.fontFamily.includes("monospace")) {
+		if (!e.style.fontFamily.includes('monospace')) {
 			e.style.fontFamily = 'system-ui, sans-serif';
 		} else {
 			e.style.fontFamily = 'monospace';
@@ -51,7 +53,7 @@ Sometimes useful with Dark Reader, which will generally not invert images.
 
 ```js
 javascript:(function() {
-	document.head.insertAdjacentHTML("beforeend", `<style>
+	document.head.insertAdjacentHTML('beforeend', `<style>
 		canvas, img {
 			filter: invert(1) hue-rotate(180deg) !important;
 		}
@@ -71,7 +73,7 @@ Sometimes useful with Dark Reader when images with a transparent background are 
 
 ```js
 javascript:(function() {
-	document.head.insertAdjacentHTML("beforeend", `<style>
+	document.head.insertAdjacentHTML('beforeend', `<style>
 		canvas, img {
 			background-color: #888 !important;
 		}
@@ -91,7 +93,7 @@ Useful for pages that are unreadable due to broken CSS.
 
 ```js
 javascript:(function() {
-	document.head.insertAdjacentHTML("beforeend", `<style>
+	document.head.insertAdjacentHTML('beforeend', `<style>
 		* {
 			background: #E4DCD7 !important;
 			color: black !important; 
@@ -109,4 +111,4 @@ javascript:(function() {
 
 Suggested keyword: <kbd>gr</kbd> ("gray background")
 
-Test page: https://meaningness.com/modes-chart after being modified by Dark Reader's Dyamic mode
+Test page: https://meaningness.com/modes-chart after being modified by Dark Reader's Dynamic mode.
