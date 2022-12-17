@@ -49,46 +49,6 @@ Test page: https://www.gwern.net/The-Melancholy-of-Subculture-Society
 
 
 
-## Invert all images
-
-Sometimes useful with Dark Reader, which will generally not invert images.
-
-```js
-javascript:(function() {
-	document.head.insertAdjacentHTML('beforeend', `<style>
-		canvas, img {
-			filter: invert(1) hue-rotate(180deg) !important;
-		}
-	</style>`);
-})();
-```
-
-Suggested keyword: <kbd>inv</kbd> ("invert")
-
-Test page: https://www.tensorflow.org/tensorboard/graphs#op-level_graph
-
-
-
-## Set a gray background-color for all images
-
-Sometimes useful with Dark Reader when images with a transparent background are made unreadable (<a href="https://github.com/darkreader/darkreader/issues/356">#356</a>, <a href="https://github.com/darkreader/darkreader/issues/3753">#3753</a>). Both black and white will be readable on gray.
-
-```js
-javascript:(function() {
-	document.head.insertAdjacentHTML('beforeend', `<style>
-		canvas, img {
-			background-color: #888 !important;
-		}
-	</style>`);
-})();
-```
-
-Suggested keyword: <kbd>fdr</kbd> ("fix dark reader")
-
-Test page: https://blog.reverberate.org/2021/04/21/musttail-efficient-interpreters.html
-
-
-
 ## Override all colors
 
 Useful for pages that are unreadable due to broken CSS.
@@ -145,3 +105,43 @@ javascript:(function() {
 Suggested keyword: none, as this is only useful on mobile.
 
 Test page: http://home.hiwaay.net/~emilyj/usenet/index.html
+
+
+
+## Invert all images
+
+Sometimes useful with Dark Reader, which will generally not invert images.
+
+```js
+javascript:(function() {
+	document.head.insertAdjacentHTML('beforeend', `<style>
+		canvas, img {
+			filter: invert(1) hue-rotate(180deg) !important;
+		}
+	</style>`);
+})();
+```
+
+Suggested keyword: <kbd>inv</kbd> ("invert")
+
+Test page: https://www.tensorflow.org/tensorboard/graphs#op-level_graph
+
+
+
+## Set a gray background-color for all images
+
+Sometimes useful with Dark Reader when images with a transparent background are made unreadable (<a href="https://github.com/darkreader/darkreader/issues/356">#356</a>, <a href="https://github.com/darkreader/darkreader/issues/3753">#3753</a>). Both black and white will be readable on gray.
+
+```js
+javascript:(function() {
+	document.head.insertAdjacentHTML('beforeend', `<style>
+		canvas, img {
+			background-color: #888 !important;
+		}
+	</style>`);
+})();
+```
+
+Suggested keyword: <kbd>fdr</kbd> ("fix dark reader")
+
+Test page: https://blog.reverberate.org/2021/04/21/musttail-efficient-interpreters.html
