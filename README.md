@@ -77,7 +77,7 @@ Test page: https://meaningness.com/modes-chart after being modified by Dark Read
 
 
 
-## Inject width=device-width
+## Inject `width=device-width`
 
 Useful on mobile when reading pages authored before smartphones, where the font size is too small due to the lack of `<meta name="viewport" content="width=device-width" />`.
 
@@ -128,7 +128,7 @@ Test page: https://www.tensorflow.org/tensorboard/graphs#op-level_graph
 
 
 
-## Set a gray background-color for all images
+## Set a gray `background-color` for all images
 
 Sometimes useful with Dark Reader when images with a transparent background are made unreadable (<a href="https://github.com/darkreader/darkreader/issues/356">#356</a>, <a href="https://github.com/darkreader/darkreader/issues/3753">#3753</a>). Both black and white will be readable on <code>#888</code> (a midpoint which is untouched by Dark Reader).
 
