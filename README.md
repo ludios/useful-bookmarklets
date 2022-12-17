@@ -119,7 +119,7 @@ Test page: https://meaningness.com/modes-chart after being modified by Dark Read
 
 ## Inject width=device-width
 
-Useful on mobile when browsing pre-smartphone pages, but where the font size is too small due to the lack of `<meta name="viewport" content="width=device-width" />`.
+Useful on mobile when reading pages authored before smartphones, where the font size is too small due to the lack of `<meta name="viewport" content="width=device-width" />`.
 
 ```js
 javascript:(function() {
