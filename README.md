@@ -22,6 +22,8 @@ Yes, bookmarklets can be used on mobile as well. In iOS Safari, bookmark any pag
 
 <a href="https://github.com/t-mart/kill-sticky">Kill Sticky</a> is the best bookmarklet and it is in someone else's repository.
 
+Kill Sticky removes all elements that have `position: fixed` or `position: sticky`, which 99% of the time is junk obscuring the text you want to read.
+
 Just add <code>javascript:</code> before <a href="https://github.com/t-mart/kill-sticky/blob/master/src/kill-sticky.js">the source here</a>.
 
 Suggested keyword: <kbd>ks</kbd> ("kill sticky")
@@ -51,6 +53,8 @@ Test page: https://www.gwern.net/The-Melancholy-of-Subculture-Society
 
 
 ## Set `max-width` on body and unjustify text
+
+Useful for pages with an unconstrained width, leading to very long lines.
 
 This bookmarklet takes one argument typed after the bookmark keyword, a `max-width` in `em`s.
 
