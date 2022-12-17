@@ -14,7 +14,7 @@ How to set things up so that you can activate a bookmarklet by typing a keyword 
 
 Note that bookmarklets don't need to be URL-encoded. You can just paste a block of JavaScript starting with `javascript:` into the URL of the bookmark (Firefox) or search engine.
 
-Yes, bookmarklets can be used on mobile as well. In iOS Safari, bookmark any page, then edit the bookmark and replace the URL with some `javascript:`.
+Yes, bookmarklets can be used on mobile as well. In iOS Safari, bookmark any page, save the bookmark, then edit the bookmark and replace the URL with some `javascript:`.
 
 
 
