@@ -102,7 +102,7 @@ javascript:(function() {
 })();
 ```
 
-Suggested keyword: none, as this is only useful on mobile.
+Suggested keyword: none, as this is useful only on mobile.
 
 Test page: http://home.hiwaay.net/~emilyj/usenet/index.html
 
