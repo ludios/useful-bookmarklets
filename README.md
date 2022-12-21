@@ -121,15 +121,15 @@ javascript:(function() {
 		<meta name="viewport" content="width=device-width" />
 		<style>
 			body {
-	            /* Without word-break: break-word, iOS Safari 16.1 lets
-	             * very long words e.g. URLs widen the page */
+				/* Without word-break: break-word, iOS Safari 16.1 lets
+				 * very long words e.g. URLs widen the page */
 				word-break: break-word;
 
-	            /* Don't let iOS Safari enlarge the font size when the phone is in landscape mode.
-	             * https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
-	             */
-	            -webkit-text-size-adjust: none;
-	            text-size-adjust: none;
+				/* Don't let iOS Safari enlarge the font size when the phone is in landscape mode.
+				 * https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
+				 */
+				-webkit-text-size-adjust: none;
+				text-size-adjust: none;
 			}
 		</style>
 	`);
