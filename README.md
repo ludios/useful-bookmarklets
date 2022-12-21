@@ -3,14 +3,14 @@
 A collection of <a href="https://en.wikipedia.org/wiki/Bookmarklet">bookmarklets</a> I use frequently.
 
 How to set things up so that you can activate a bookmarklet by typing a keyword into the address bar:
-*	Chrome
-	1.	Right-click the address bar, 'Manage search engines and site search' to reach <tt>chrome://settings/searchEngines</tt>
-	2.	'Add' a site search with a `javascript:` URL and enter a keyword into 'Shortcut'
-*	Edge
-	1.	Visit <tt>edge://settings/searchEngines</tt>
-	2.	'Add' a site search with a `javascript:` URL and enter a keyword into 'Keyword'
-*	Firefox
-	1.	Add a bookmark with a `javascript:` URL and enter a keyword into 'Keyword'
+* Chrome
+  1. Right-click the address bar, 'Manage search engines and site search' to reach <tt>chrome://settings/searchEngines</tt>
+  2. 'Add' a site search with a `javascript:` URL and enter a keyword into 'Shortcut'
+* Edge
+  1. Visit <tt>edge://settings/searchEngines</tt>
+  2. 'Add' a site search with a `javascript:` URL and enter a keyword into 'Keyword'
+* Firefox
+  1. Add a bookmark with a `javascript:` URL and enter a keyword into 'Keyword'
 
 Note that bookmarklets don't need to be URL-encoded. You can just paste a block of JavaScript starting with `javascript:` into the URL of the bookmark (Firefox) or search engine.
 
@@ -36,13 +36,13 @@ Test page: https://www.quantamagazine.org/she-turns-fluids-into-black-holes-and-
 
 ```js
 javascript:(function() {
-	document.querySelectorAll('*').forEach(e => {
-		if (!e.style.fontFamily.includes('monospace')) {
-			e.style.fontFamily = 'system-ui, sans-serif';
-		} else {
-			e.style.fontFamily = 'monospace';
-		}
-	});
+  document.querySelectorAll('*').forEach(e => {
+    if (!e.style.fontFamily.includes('monospace')) {
+      e.style.fontFamily = 'system-ui, sans-serif';
+    } else {
+      e.style.fontFamily = 'monospace';
+    }
+  });
 })();
 ```
 
@@ -60,20 +60,20 @@ This bookmarklet takes one argument typed after the bookmark keyword, a `max-wid
 
 ```js
 javascript:(function() {
-	const max_width = %s || 40;
+  const max_width = %s || 40;
 
-	document.head.insertAdjacentHTML('beforeend', `<style>
-		body {
-			margin: 0 auto !important; 
-			max-width: ${max_width}em;
-		}
-	</style>`);
+  document.head.insertAdjacentHTML('beforeend', `<style>
+    body {
+      margin: 0 auto !important;
+      max-width: ${max_width}em;
+    }
+  </style>`);
 
-	document.querySelectorAll('*').forEach(e => {
-		if (window.getComputedStyle(e).getPropertyValue('text-align') == 'justify') {
-			e.style.textAlign = 'left';
-		}
-	});
+  document.querySelectorAll('*').forEach(e => {
+    if (window.getComputedStyle(e).getPropertyValue('text-align') == 'justify') {
+      e.style.textAlign = 'left';
+    }
+  });
 })();
 ```
 
@@ -89,19 +89,19 @@ Useful for pages that are unreadable due to broken CSS.
 
 ```js
 javascript:(function() {
-	document.head.insertAdjacentHTML('beforeend', `<style>
-		* {
-			background: #E4DCD7 !important;
-			color: black !important; 
-			text-shadow: none !important;
-		}
-		:link, :link * {
-			color: #0000EE !important;
-		}
-		:visited, :visited * {
-			color: #551A8B !important;
-		}
-	</style>`);
+  document.head.insertAdjacentHTML('beforeend', `<style>
+    * {
+      background: #E4DCD7 !important;
+      color: black !important;
+      text-shadow: none !important;
+    }
+    :link, :link * {
+      color: #0000EE !important;
+    }
+    :visited, :visited * {
+      color: #551A8B !important;
+    }
+  </style>`);
 })();
 ```
 
@@ -117,22 +117,22 @@ Useful on mobile when reading pages authored before smartphones, where the font 
 
 ```js
 javascript:(function() {
-	document.head.insertAdjacentHTML('beforeend', `
-		<meta name="viewport" content="width=device-width" />
-		<style>
-			body {
-				/* Without word-break: break-word, iOS Safari 16.1 lets
-				 * very long words e.g. URLs widen the page */
-				word-break: break-word;
+  document.head.insertAdjacentHTML('beforeend', `
+    <meta name="viewport" content="width=device-width" />
+    <style>
+      body {
+        /* Without word-break: break-word, iOS Safari 16.1 lets
+         * very long words e.g. URLs widen the page */
+        word-break: break-word;
 
-				/* Don't let iOS Safari enlarge the font size when the phone is in landscape mode.
-				 * https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
-				 */
-				-webkit-text-size-adjust: none;
-				text-size-adjust: none;
-			}
-		</style>
-	`);
+        /* Don't let iOS Safari enlarge the font size when the phone is in landscape mode.
+         * https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
+         */
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+      }
+    </style>
+  `);
 })();
 ```
 
@@ -148,11 +148,11 @@ Sometimes useful with Dark Reader, which will generally not invert images.
 
 ```js
 javascript:(function() {
-	document.head.insertAdjacentHTML('beforeend', `<style>
-		canvas, img {
-			filter: invert(1) hue-rotate(180deg) !important;
-		}
-	</style>`);
+  document.head.insertAdjacentHTML('beforeend', `<style>
+    canvas, img {
+      filter: invert(1) hue-rotate(180deg) !important;
+    }
+  </style>`);
 })();
 ```
 
@@ -168,11 +168,11 @@ Sometimes useful with Dark Reader when images with a transparent background are 
 
 ```js
 javascript:(function() {
-	document.head.insertAdjacentHTML('beforeend', `<style>
-		canvas, img {
-			background-color: #888 !important;
-		}
-	</style>`);
+  document.head.insertAdjacentHTML('beforeend', `<style>
+    canvas, img {
+      background-color: #888 !important;
+    }
+  </style>`);
 })();
 ```
 
