@@ -179,3 +179,26 @@ javascript:(function() {
 Suggested keyword: <kbd>fdr</kbd> ("fix dark reader")
 
 Test page: https://blog.reverberate.org/2021/04/21/musttail-efficient-interpreters.html
+
+
+
+## Reduce brightness of text and images
+
+This is useful when using Dark Reader (for light-on-dark text) on a hidpi screen to read a long article or book.
+
+```js
+javascript:(function() {
+  document.head.insertAdjacentHTML("beforeend", `<style>
+    body {
+      color: rgb(153 153 153);
+    }
+    img {
+      opacity: 0.65;
+    }
+  </style>`);
+})();
+```
+
+Suggested keyword: <kbd>da</kbd> ("darker")
+
+Test page: https://unbook.ludios.org/ (with Dark Reader enabled)
