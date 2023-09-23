@@ -38,7 +38,7 @@ Test page: https://www.quantamagazine.org/she-turns-fluids-into-black-holes-and-
 javascript:(function() {
   document.querySelectorAll('*').forEach(e => {
     if (!e.style.fontFamily.includes('monospace')) {
-      e.style.fontFamily = 'system-ui, sans-serif';
+      e.style.fontFamily = 'sans-serif';
     } else {
       e.style.fontFamily = 'monospace';
     }
