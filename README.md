@@ -26,6 +26,34 @@ Kill Sticky removes all elements that have `position: fixed` or `position: stick
 
 Just add <code>javascript:</code> before <a href="https://github.com/t-mart/kill-sticky/blob/master/src/kill-sticky.js">the source here</a>.
 
+If you find the canonical version lacking because it fails to kill Wayback Machine's sticky header (it's inside its own `#shadow-root`), use
+
+```js
+javascript:(function() {
+  document.querySelectorAll('div#wm-ipp-base[style]').forEach(function(node) {
+    node.parentNode.removeChild(node);
+  });
+
+  document.querySelectorAll('body *').forEach(function(node) {
+    if (['fixed', 'sticky'].includes(getComputedStyle(node).position)) {
+      node.parentNode.removeChild(node);
+    }
+  });
+
+  document.querySelectorAll('html *').forEach(function(node) {
+    const s = getComputedStyle(node);
+    if ('hidden' === s['overflow']) { node.style['overflow'] = 'visible'; }
+    if ('hidden' === s['overflow-x']) { node.style['overflow-x'] = 'visible'; }
+    if ('hidden' === s['overflow-y']) { node.style['overflow-y'] = 'visible'; }
+  });
+
+  const htmlNode = document.querySelector('html');
+  htmlNode.style['overflow'] = 'visible';
+  htmlNode.style['overflow-x'] = 'visible';
+  htmlNode.style['overflow-y'] = 'visible';
+})();
+```
+
 Suggested keyword: <kbd>ks</kbd> ("kill sticky")
 
 Test page: https://www.quantamagazine.org/she-turns-fluids-into-black-holes-and-inflating-universes-20221212/
